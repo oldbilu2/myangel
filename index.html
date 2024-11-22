@@ -166,7 +166,7 @@
         <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="Imagem fofinha">
         <h2>Aceita namorar comigo?</h2>
 
-        <audio autoplay loop>
+        <audio id="audio" loop>
             <source src="/audio/POV _ _you have no enemies_ _   [ playlist ]   _ SLOWED.mp3" type="audio/mp3">
             Seu navegador não suporta o elemento audio.
         </audio>
@@ -189,6 +189,12 @@
 
     <script>
         let cliquesNao = 0;
+        let audio = document.getElementById("audio");
+
+        // Inicia a música ao clicar em qualquer lugar na página
+        window.addEventListener("click", function() {
+            audio.play(); // Inicia a música
+        });
 
         function mostrarResposta() {
             var resposta = document.getElementById("resposta-triste");
